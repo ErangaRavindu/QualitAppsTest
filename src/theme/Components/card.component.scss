@@ -1,0 +1,47 @@
+@mixin card-component($theme){
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+  $warn: map-get($theme, warn);
+  $foreground: map-get($theme, foreground);
+  $background: map-get($theme, background);
+  .c-card{
+    //padding: $base-space-md;
+    display: flex;
+    flex-direction: column;
+    background-color: map-get($background, card);
+    border-radius: $base-space-xs;
+    border: 1px solid rgb(237, 237, 237);
+    margin: $base-corner-md 0;
+    width: 100%;
+    box-sizing: border-box;
+    transition: $global-transition;
+    box-shadow: $shadow-default;
+    &__title{
+      font: $heading-desktop-h6;
+    }
+    &__header{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      padding: $base-space-md $base-space-md 0 $base-space-md ;
+    }
+    &__body{
+      padding: $base-space-md;
+      color: map-get($foreground, secondary-text);
+    }
+    &__footer{
+      padding: 0 $base-space-md $base-space-md $base-space-md ;
+    }
+
+    &--warning{
+      background: $accent-warning-background;
+
+    }
+    &--container{
+      border: none;
+    }
+    &--light{
+      background-color: map-get($background, shade);
+    }
+  }
+}

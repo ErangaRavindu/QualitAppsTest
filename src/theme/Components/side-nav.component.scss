@@ -1,0 +1,32 @@
+@mixin side-nav-component($theme){
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+  $warn: map-get($theme, warn);
+  $foreground: map-get($theme, foreground);
+  $background: map-get($theme, background);
+  .c-side-nav{
+    border-top: 1px solid map-get($foreground, divider);
+    &__item{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: $base-corner-xs $base-space-md;
+      border-bottom:1px solid map-get($foreground, divider);
+      cursor: pointer;
+      &:hover{
+        background-color: map-get($background, hover);
+      }
+    }
+    &__labels{
+
+    }
+    &__title{
+      font: $body-small-medium;
+      color: map-get($foreground, text);
+    }
+    &__subtitle{
+      font: $body-xsmall-default;
+      color: map-get($foreground, secondary-text);
+    }
+  }
+}

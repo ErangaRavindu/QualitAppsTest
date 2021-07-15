@@ -1,0 +1,25 @@
+@mixin grid-layout($theme){
+  .grid-5 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-row-gap: $base-space-md;
+    grid-gap: $base-space-md;
+    margin-bottom: $base-space-md;
+    @include respond-to(large-desktop){
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    @include respond-to(small-desktop){
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    @include respond-to(handhelds-landscape){
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    @include respond-to(handhelds){
+      grid-template-columns: 1fr 1fr;
+    }
+
+
+
+  }
+}

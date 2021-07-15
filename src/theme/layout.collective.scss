@@ -1,0 +1,8 @@
+@import "layouts/flex-box.layout","layouts/main.layout","layouts/page-layout.layout","layouts/grid.layout";
+
+@mixin layout-collective($theme){
+  @include main-layout($theme);
+  @include flex-box-layout($theme);
+  @include page-layout($theme);
+  @include grid-layout($theme);
+}

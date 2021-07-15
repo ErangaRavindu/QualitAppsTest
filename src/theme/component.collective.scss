@@ -1,0 +1,9 @@
+@import "Components/avatar-component","Components/card.component", "Components/header.component","Components/side-nav.component","Components/chip.component";
+
+@mixin component-collective($theme){
+  @include avatar-component($theme);
+  @include card-component($theme);
+  @include header-component($theme);
+  @include side-nav-component($theme);
+  @include chip-component($theme);
+}

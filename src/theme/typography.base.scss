@@ -1,0 +1,94 @@
+@mixin typography-base($theme){
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+  $warn: map-get($theme, warn);
+  $foreground: map-get($theme, foreground);
+  $background: map-get($theme, background);
+  h1{
+    font: $heading-desktop-h1;
+  }
+  h2{
+    font: $heading-desktop-h2;
+  }
+  h3{
+    font: $heading-desktop-h3;
+  }
+  h4{
+    font: $heading-desktop-h4;
+  }
+  h5{
+    font: $heading-desktop-h5;
+  }
+  h6{
+    font: $heading-desktop-h6;
+  }
+  .body-base-default {
+    font: $body-base-default;
+  }
+  .body-base-bold {
+    font: $body-base-bold;
+    color: map-get($foreground, text);
+  }
+  .body-base-medium {
+    font: $body-base-medium;
+  }
+  .body-small-default {
+    font: $body-small-default;
+    word-break: break-word;
+  }
+  .body-small-medium{
+    font: $body-small-medium;
+  }
+  .body-small-bold {
+    font: $body-small-bold;
+  }
+  .body-xsmall-default {
+    font: $body-xsmall-default;
+  }
+  .body-xsmall-bold {
+    font: $body-xsmall-bold;
+  }
+  .body-xxsmall-default {
+    font: $body-xxsmall-bold;
+  }
+  .body-xxsmall-bold {
+    font: $body-xxsmall-bold;
+  }
+
+  .text-underlined {
+    text-decoration: underline;
+  }
+  .text-align{
+  }
+
+  .accent-text{
+    &--primary {
+      color: map-get($primary, default);
+    }
+    &--seconday {
+      color: map-get($accent, default);
+    }
+    &--danger {
+      color: $accent-critical-foreground;
+    }
+    &--warning {
+      color: $accent-warning-foreground;
+    }
+    &--info {
+      color:$accent-info-foreground;
+    }
+  }
+  .ellipsis-text{
+    display: block;
+    &-one{
+      @include ellipsis-text(1)
+    }
+    &-two{
+      @include ellipsis-text(2)
+    }
+    &-three{
+      @include ellipsis-text(3)
+    }
+
+  }
+}

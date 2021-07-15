@@ -1,0 +1,5 @@
+@import "pages/index.page";
+
+@mixin pages-collective($theme){
+  @include pages-collective($theme);
+}

@@ -1,0 +1,58 @@
+@mixin header-component($theme){
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+  $warn: map-get($theme, warn);
+  $foreground: map-get($theme, foreground);
+  $background: map-get($theme, background);
+  .c-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    color: map-get($primary, 100);
+    &__toolbar{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: map-get($primary, 100);
+    }
+    &__wrapper {
+      display: flex;
+      align-items: center;
+      padding: 0 $base-space-sm;
+      &--flex{
+        display: flex;
+      }
+    }
+    &__title{
+      font:$heading-desktop-h6;
+    }
+    &__subtitle{
+      font:$body-small-default;
+    }
+
+    &__nav{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+    }
+    &__nav-item{
+      padding:0 $base-space-md;
+      cursor: pointer;
+      user-select: none;
+    }
+    &__nav-indicator{
+      height: 4px;
+      background-color: transparent;;
+    }
+    &__nav-item--active{
+      .c-header__nav-indicator{
+        background-color: map-get($primary,100);
+      }
+    }
+    &__nav-item-label{
+      padding: $base-corner-sm 0;
+      font: $body-small-medium;
+    }
+  }
+}

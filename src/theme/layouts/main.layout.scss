@@ -1,0 +1,28 @@
+@mixin main-layout($theme){
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+  $warn: map-get($theme, accent);
+  $foreground: map-get($theme, foreground);
+  $background: map-get($theme, background);
+  $side-nav-width: 280px !default;
+  body{
+    background-color: map-get($background, background) !important;
+  }
+  .l-main{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+
+    &__container{
+      height:100%;
+      width: 100%;
+      overflow: auto;
+    }
+    &__side-nav{
+      width: $side-nav-width ;
+      background-color: map-get($primary, 50);
+    }
+
+  }
+}
