@@ -10,10 +10,22 @@
     }
     &__grid-row{
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+      font: $body-small-default ;
+      &--header{
+        font: $body-small-bold ;
+      }
+      &:not(:last-child){
+        border-bottom: 1px solid map-get($foreground, divider);
+      }
     }
     &__column{
-
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &:not(:last-child){
+        border-right:  1px solid map-get($foreground, divider);
+      }
     }
   }
 }
