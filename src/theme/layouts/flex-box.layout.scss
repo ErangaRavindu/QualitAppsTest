@@ -6,6 +6,7 @@
   $background: map-get($theme, background);
   .flex-box {
     display: flex;
+    box-sizing: border-box;
     &.flex-direction-column { // This changes the layout direction from the default horizontal to vertical
       flex-direction:column;
     }

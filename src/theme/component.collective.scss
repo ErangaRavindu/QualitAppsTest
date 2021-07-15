@@ -1,4 +1,4 @@
-@import "Components/avatar-component","Components/card.component", "Components/header.component","Components/side-nav.component","Components/chip.component";
+@import "Components/avatar-component","Components/card.component", "Components/header.component","Components/side-nav.component","Components/chip.component","Components/input-type-one.component";
 
 @mixin component-collective($theme){
   @include avatar-component($theme);
@@ -6,4 +6,5 @@
   @include header-component($theme);
   @include side-nav-component($theme);
   @include chip-component($theme);
+  @include input-type-one($theme)
 }

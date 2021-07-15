@@ -47,6 +47,42 @@ $color-primary: (
   )
 );
 
+// Background palette for light themes.
+$mat-light-theme-background: (
+        status-bar: map-get($mat-grey, 300),
+        app-bar:    map-get($mat-grey, 100),
+        background: map-get($mat-grey, 50),
+        hover:      rgba(black, 0.04), // TODO(kara): check style with Material Design UX
+        card:       white,
+        dialog:     white,
+        disabled-button: rgba(black, 0.12),
+        raised-button: white,
+        focused-button: $dark-focused,
+        selected-button: map-get($mat-grey, 300),
+        selected-disabled-button: map-get($mat-grey, 400),
+        disabled-button-toggle: map-get($mat-grey, 200),
+        unselected-chip: map-get($mat-grey, 300),
+        disabled-list-option: map-get($mat-grey, 200),
+        tooltip: map-get($mat-grey, 700),
+);
+// Foreground palette for light themes.
+$mat-light-theme-foreground: (
+        base:              black,
+        divider:           $dark-dividers,
+        dividers:          $dark-dividers,
+        disabled:          $dark-disabled-text,
+        disabled-button:   rgba(black, 0.26),
+        disabled-text:     $dark-disabled-text,
+        elevation:         black,
+        hint-text:         $dark-disabled-text,
+        secondary-text:    #C4CFD5,
+        icon:              rgba(black, 0.54),
+        icons:             rgba(black, 0.54),
+        text:              #90A4AE,
+        slider-min:        rgba(black, 0.87),
+        slider-off:        rgba(black, 0.26),
+        slider-off-active: rgba(black, 0.38),
+);
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/

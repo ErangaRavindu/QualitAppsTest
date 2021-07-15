@@ -28,4 +28,13 @@
       }
     }
   }
+  ul{
+    list-style-type: "* ";
+    padding-left: $base-space-md;
+    font:$body-small-bold;
+    li::marker{
+      vertical-align: middle;
+      margin-right: $base-space-xs;
+    }
+  }
 }

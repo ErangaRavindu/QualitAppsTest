@@ -60,7 +60,14 @@
   }
   .text-align{
   }
-
+  .body-content{
+    &--primary{
+      color: map-get($foreground, text);
+    }
+    &--secondary{
+      color: map-get($foreground, secondary-text);
+    }
+  }
   .accent-text{
     &--primary {
       color: map-get($primary, default);

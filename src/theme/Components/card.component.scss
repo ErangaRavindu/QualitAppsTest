@@ -27,7 +27,6 @@
     }
     &__body{
       padding: $base-space-md;
-      color: map-get($foreground, secondary-text);
     }
     &__footer{
       padding: 0 $base-space-md $base-space-md $base-space-md ;

@@ -23,6 +23,11 @@
         display: flex;
       }
     }
+    &__logo{
+      height: 48px;
+      background-size: cover;
+      background-position: center;
+    }
     &__title{
       font:$heading-desktop-h6;
     }
@@ -35,11 +40,38 @@
       flex-direction: row;
       align-items: center;
       justify-content: flex-start;
+      margin-bottom: 0;
+      list-style-type: none;
+
+      @media only screen and (max-width: 1024px) {
+        display:flex ;
+      }
+      @media only screen and (max-width: 768px) {
+        display:none ;
+      }
+    }
+    &__nav--mobile{
+      display: none;
+      @media only screen and (max-width: 1200px) {
+        display:none ;
+      }
+      @media only screen and (max-width: 960px) {
+        display:none ;
+      }
+      @media only screen and (max-width: 1024px) {
+        display:none ;
+      }
+      @media only screen and (max-width: 768px) {
+        display:flex ;
+      }
     }
     &__nav-item{
       padding:0 $base-space-md;
       cursor: pointer;
       user-select: none;
+      &:hover{
+        background-color: map-get($background, hover);
+      }
     }
     &__nav-indicator{
       height: 4px;

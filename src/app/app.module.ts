@@ -1,4 +1,7 @@
 import { NgModule } from '@angular/core';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatMenuModule } from '@angular/material/menu';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
@@ -14,16 +17,19 @@ import {MatRippleModule} from '@angular/material/core';
   declarations: [
     AppComponent
   ],
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    NgbModule,
-    MatToolbarModule,
-    MatSidenavModule,
-    MatButtonModule,
-    MatIconModule,
-    MatRippleModule
-  ],
+    imports: [
+        BrowserModule,
+        BrowserAnimationsModule,
+        NgbModule,
+        MatToolbarModule,
+        MatSidenavModule,
+        MatButtonModule,
+        MatIconModule,
+        MatRippleModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatMenuModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

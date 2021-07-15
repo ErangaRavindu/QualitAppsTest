@@ -1,0 +1,7 @@
+@mixin fab-wrapper($theme){
+  .fab-wrapper{
+    position: absolute;
+    right: $base-space-lg;
+    bottom: $base-space-lg;
+  }
+}
