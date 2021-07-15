@@ -22,7 +22,9 @@
     &__header{
       width: 100%;
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
       padding: $base-space-md $base-space-md 0 $base-space-md ;
     }
     &__body{

@@ -1,0 +1,153 @@
+@mixin modal-component-theme($theme) {
+  $primary: map-get($theme, primary);
+  //map-get($themes, primary)
+  $primary-contrast: map-get($theme, primary-contrast);
+  $accent: map-get($theme, accent);
+  $warn: map-get($theme, accent);
+  $foreground: map-get($theme, foreground);
+  $background: map-get($theme, background);
+  $empty-icon-height: 56px;
+  $text-color: mat-color($foreground, text);
+  $divider: map-get($foreground, dividers);
+  .modal {
+    &--small {
+      .mat-dialog-content {
+        margin: 0;
+        padding: 0;
+      }
+      color: $text-color;
+      .mat-dialog-container {
+        min-width: 640px;
+        max-width: 640px;
+        .scroll-content {
+          border-top: 1px solid $divider;
+          border-bottom: 1px solid $divider;
+        }
+      }
+      .mat-dialog-actions {
+        margin-bottom: 0;
+        justify-content: flex-end;
+      }
+      .mat-dialog-title {
+        padding-bottom: $base-space-md 0 !important;
+      }
+    }
+
+    &--medium {
+      color: $text-color;
+      .mat-dialog-content {
+        margin: 0;
+        padding: 0;
+      }
+      .mat-dialog-container {
+        width: 960px;
+        .scroll-content {
+          border-top: 1px solid $divider;
+          border-bottom: 1px solid $divider;
+          box-sizing: border-box;
+
+        }
+      }
+      .mat-dialog-actions {
+        margin-bottom: 0;
+        &[align='end'] {
+          justify-content: flex-end;
+        }
+
+        &[align='center'] {
+          justify-content: center;
+        }
+      }
+      .mat-dialog-title {
+        padding-bottom: 20px !important;
+        background: map-get($background, disabled-button-toggle);
+      }
+    }
+
+
+    &--flex {
+      .tc-dialog-content {
+        max-height: 80vh;
+        height: max-content;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+      }
+      .dialog-body {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        flex-shrink: 0
+      }
+      .mat-dialog-container {
+        display: flex;
+        flex-direction: column ;
+      }
+      .scroll-content {
+        min-height: 100% !important;
+        max-height: 100% !important;
+        border-top: 1px solid map-get($foreground, divider);
+        border-bottom: 1px solid map-get($foreground, divider);
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        flex-shrink: 8;
+      }
+      .mat-dialog-actions {
+        display: flex;
+        flex-grow: 1;
+        min-height: 64px;
+      }
+      .mat-dialog-title {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+      }
+    }
+
+
+  }
+  .mat-dialog-container {
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.12), 0 16px 16px rgba(0, 0, 0, 0.24);
+    color: inherit;
+    overflow-y: hidden;
+    padding: 0;
+    border-radius: 8px;
+    max-height: 100vh;
+    position: relative;
+    .mat-dialog-title {
+      margin: 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      flex: 1;
+      font: $heading-desktop-h6;
+      line-height: 1;
+      padding-bottom: 20px;
+      font-weight: 500;
+    }
+    .dialog-body {
+      width: 100%;
+      padding: 8px 20px;
+      max-height: none;
+      margin: 0;
+    }
+    .mat-dialog-chip__list {
+      max-height: 20vh;
+      overflow: auto;
+    }
+    .mat-dialog-actions {
+      padding-inline-end: 20px;
+      padding-inline-start: 20px;
+      padding-top: 20px;
+      padding-bottom: 8px;
+    }
+    .scroll-content {
+      max-height: 50vh;
+      overflow: auto
+    }
+  }
+
+}

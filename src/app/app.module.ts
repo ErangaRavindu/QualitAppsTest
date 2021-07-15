@@ -1,4 +1,6 @@
 import { NgModule } from '@angular/core';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatMenuModule } from '@angular/material/menu';
@@ -12,10 +14,12 @@ import { MatSidenavModule} from '@angular/material/sidenav';
 import {MatButtonModule} from '@angular/material/button';
 import { MatIconModule} from '@angular/material/icon';
 import {MatRippleModule} from '@angular/material/core';
+import { ModalComponent } from './modal/modal.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ModalComponent
   ],
     imports: [
         BrowserModule,
@@ -28,7 +32,9 @@ import {MatRippleModule} from '@angular/material/core';
         MatRippleModule,
         MatFormFieldModule,
         MatInputModule,
-        MatMenuModule
+        MatMenuModule,
+        MatDialogModule,
+        MatCheckboxModule
     ],
   providers: [],
   bootstrap: [AppComponent]
